@@ -3,9 +3,9 @@ name: Android Build CI
 # Triggers: Run this pipeline when code is pushed to main or a pull request is made
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
 jobs:
   build:
