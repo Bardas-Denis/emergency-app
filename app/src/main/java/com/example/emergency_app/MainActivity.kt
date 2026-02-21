@@ -12,6 +12,7 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.emergency_app.databinding.ActivityMainBinding
+import com.example.emergency_app.services.AccidentDetectionService
 import com.example.emergency_app.ui.emergency_contact.EmergencyContactFragment
 import com.example.emergency_app.ui.home.HomeFragment
 import com.example.emergency_app.ui.home.SimulationViewModel
@@ -122,10 +123,5 @@ class MainActivity : AppCompatActivity() {
 
             binding.bottomNavigationView.selectedItemId = R.id.home
         }
-    }
-
-    fun onEmergencyFinished() {
-        stopDrivingMode()
-        ViewModelProvider(this)[SimulationViewModel::class.java].isDrivingModeActive = false
     }
 }

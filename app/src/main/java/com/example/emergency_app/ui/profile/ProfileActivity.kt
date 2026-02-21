@@ -1,4 +1,4 @@
-package com.example.emergency_app
+package com.example.emergency_app.ui.profile
 
 import android.content.Intent
 import android.net.Uri
@@ -6,6 +6,9 @@ import android.os.Bundle
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.example.emergency_app.R
+import androidx.core.content.edit
+import androidx.core.net.toUri
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -43,16 +46,16 @@ class ProfileActivity : AppCompatActivity() {
 
     private fun saveImageUri(uri: Uri) {
         val prefs = getSharedPreferences("profile_prefs", MODE_PRIVATE)
-        prefs.edit()
-            .putString("profile_image_uri", uri.toString())
-            .apply()
+        prefs.edit {
+            putString("profile_image_uri", uri.toString())
+        }
     }
 
     private fun loadSavedImage() {
         val prefs = getSharedPreferences("profile_prefs", MODE_PRIVATE)
         val uriString = prefs.getString("profile_image_uri", null)
         uriString?.let {
-            imgProfile.setImageURI(Uri.parse(it))
+            imgProfile.setImageURI(it.toUri())
         }
     }
 }

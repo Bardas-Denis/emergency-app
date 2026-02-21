@@ -17,10 +17,9 @@ import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.emergency_app.R
 import com.example.emergency_app.databinding.DialogAddContactBinding
 import com.example.emergency_app.databinding.FragmentEmergencyContactBinding
-import com.example.emergency_app.model.EmergencyContact
+import com.example.emergency_app.data.EmergencyContact
 import androidx.core.net.toUri
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -28,6 +27,7 @@ import com.google.firebase.firestore.ListenerRegistration
 import android.net.Uri
 import android.widget.ImageView
 import android.content.SharedPreferences
+import androidx.core.content.edit
 
 class EmergencyContactFragment : Fragment() {
 
@@ -275,9 +275,9 @@ class EmergencyContactFragment : Fragment() {
 
         requireContext()
             .getSharedPreferences("profile_prefs", Context.MODE_PRIVATE)
-            .edit()
-            .putString("profile_image_path", file.absolutePath)
-            .apply()
+            .edit {
+                putString("profile_image_path", file.absolutePath)
+            }
     }
 
 

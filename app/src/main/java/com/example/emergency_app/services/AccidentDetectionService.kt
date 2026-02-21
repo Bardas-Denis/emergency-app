@@ -1,4 +1,4 @@
-package com.example.emergency_app
+package com.example.emergency_app.services
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -14,6 +14,7 @@ import android.hardware.SensorManager
 import android.os.IBinder
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
+import com.example.emergency_app.ui.home.EmergencyCountdownActivity
 import com.google.android.gms.location.LocationServices
 import kotlin.math.sqrt
 
@@ -81,8 +82,11 @@ class AccidentDetectionService : Service(), SensorEventListener {
         val channelId = "crash_detection_channel"
         val channelName = "Accident Detection"
 
-        val channel = NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_LOW)
-        getSystemService(NotificationManager::class.java)?.createNotificationChannel(channel)
+        val channel =
+            NotificationChannel(channelId, channelName, NotificationManager.IMPORTANCE_LOW)
+
+        val notificationManager = getSystemService(NotificationManager::class.java)
+        notificationManager?.createNotificationChannel(channel)
 
         val notification = NotificationCompat.Builder(this, channelId)
             .setContentTitle("Driving Mode Active")

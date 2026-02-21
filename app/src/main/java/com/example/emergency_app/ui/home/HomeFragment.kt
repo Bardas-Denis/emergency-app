@@ -28,8 +28,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.lifecycleScope
-import com.example.emergency_app.EmergencyCountdownActivity
-import com.example.emergency_app.LoginActivity
+import com.example.emergency_app.ui.auth.LoginActivity
 import com.example.emergency_app.MainActivity
 import com.example.emergency_app.R
 import com.example.emergency_app.databinding.FragmentHomeBinding

@@ -1,4 +1,4 @@
-package com.example.emergency_app.model
+package com.example.emergency_app.data
 
 import java.util.UUID
 

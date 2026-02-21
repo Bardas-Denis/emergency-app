@@ -1,6 +1,5 @@
 package com.example.emergency_app.ui.emergency_contact
 
-import android.content.res.ColorStateList
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -12,7 +11,7 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.emergency_app.R
-import com.example.emergency_app.model.EmergencyContact
+import com.example.emergency_app.data.EmergencyContact
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout

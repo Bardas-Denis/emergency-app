@@ -1,6 +1,7 @@
-package com.example.emergency_app
+package com.example.emergency_app.ui.home
 
 import android.Manifest
+import android.app.NotificationManager
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
@@ -10,12 +11,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationCompat
+import com.example.emergency_app.MainActivity
 import com.example.emergency_app.databinding.ActivityCountdownBinding
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.location.Priority
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import android.app.NotificationManager
 
 class EmergencyCountdownActivity : AppCompatActivity() {
 
@@ -93,15 +94,13 @@ class EmergencyCountdownActivity : AppCompatActivity() {
             .setContentText(medicalInfo)
             .setStyle(NotificationCompat.BigTextStyle().bigText(medicalInfo))
             .setSmallIcon(android.R.drawable.ic_menu_compass)
-
             .setPriority(NotificationCompat.PRIORITY_MAX)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setOngoing(true)
             .build()
 
-
         val notificationManager = getSystemService(NotificationManager::class.java)
-        notificationManager.notify(1, emergencyNotification)
+        notificationManager?.notify(1, emergencyNotification)
     }
 
     private fun sendEmergencySMS() {
