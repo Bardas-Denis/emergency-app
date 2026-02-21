@@ -1,6 +1,10 @@
 # 🚑 Emergency Response Android App
 
-![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Kotlin](https://img.shields.io/badge/Kotlin-1.9.0-blue) ![Firebase](https://img.shields.io/badge/Firebase-Enabled-orange) ![Architecture](https://img.shields.io/badge/Architecture-MVVM-purple)
+![CI/CD](https://img.shields.io/badge/CI%2FCD-GitHub_Actions-2088FF?style=flat&logo=github-actions&logoColor=white)
+![Backend](https://img.shields.io/badge/Backend-Firebase-FFCA28?style=flat&logo=firebase&logoColor=black)
+![Maps](https://img.shields.io/badge/Maps-OpenStreetMap-7EBC6F?style=flat&logo=openstreetmap&logoColor=white)
+![Language](https://img.shields.io/badge/Language-Kotlin-7F52FF?style=flat&logo=kotlin&logoColor=white)
+![Architecture](https://img.shields.io/badge/Architecture-MVVM-purple?style=flat)
 
 A comprehensive safety application designed to detect vehicle accidents via hardware sensors and coordinate emergency response simulations. Built with **Native Kotlin**, utilizing a **Serverless Architecture**, and deployed via a fully automated **CI/CD pipeline**.
 
@@ -8,14 +12,31 @@ A comprehensive safety application designed to detect vehicle accidents via hard
 
 ## 📱 App Demo
 
-<p align="center">
-    <i>Ambulance Simulation:</i><br>
-    <img src="screenshots/ambulance.gif" width="220" alt="Ambulance Simulation" />
-</p>
+<div align="center">
 
-|                      Home                      |                  Medical Info                  |                 Emergency Contacts                 |
-|:----------------------------------------------:|:----------------------------------------------:|:--------------------------------------------------:|
-| <img src="screenshots/home.png" width="220" /> | <img src="screenshots/info.png" width="220" /> | <img src="screenshots/contacts.png" width="220" /> |
+  <table>
+    <tr>
+        <th align="center">Ambulance Simulation</th>
+    </tr>
+    <tr>
+        <td align="center"><img src="screenshots/ambulance.gif" width="220" /></td>
+    </tr>
+  </table>
+
+  <table>
+    <tr>
+      <th align="center">Home</th>
+      <th align="center">Medical Info</th>
+      <th align="center">Emergency Contacts</th>
+    </tr>
+    <tr>
+      <td align="center"><img src="screenshots/home.png" width="220" /></td>
+      <td align="center"><img src="screenshots/info.png" width="220" /></td>
+      <td align="center"><img src="screenshots/contacts.png" width="220" /></td>
+    </tr>
+  </table>
+
+</div>
 
 ---
 
